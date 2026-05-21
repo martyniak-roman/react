@@ -1,7 +1,7 @@
 import type {ITodo} from "../models/ITodo.ts";
 
 const getPosts = async ():Promise<ITodo[]> => {
-    return await fetch(import.meta.env.VITE_PUBLIC_API_URL)
+    return await fetch('https://jsonplaceholder.typicode.com/posts')
         .then((res) => res.json());
 }
 
