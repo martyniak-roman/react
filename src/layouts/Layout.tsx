@@ -1,0 +1,28 @@
+import { NavLink, Outlet } from "react-router-dom";
+import "./Layout.css";
+
+export const Layout = () => {
+    return (
+        <div>
+            <header className="header">
+                <div className="header__container">
+                    <h1 className="header__logo">App</h1>
+
+                    <nav className="nav">
+                        <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>
+                            Home
+                        </NavLink>
+
+                        <NavLink to="/products" className={({ isActive }) => isActive ? "active" : ""}>
+                            Products
+                        </NavLink>
+                    </nav>
+                </div>
+            </header>
+
+            <main className="main">
+                <Outlet />
+            </main>
+        </div>
+    );
+};
