@@ -16,7 +16,7 @@ export const Products = () => {
 
     }, [])
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div>
             {products.map(product => (<Product product={product}  key={product.id}/>))}
         </div>
     );
