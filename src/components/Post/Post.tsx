@@ -12,41 +12,41 @@ const isDummyPost = (post: AnyPost): post is IDummyPost => "tags" in post;
 export const Post = ({ post }: PostItemProps) => {
     return (
         <div className="space-y-2">
-            <div className="text-base font-bold text-slate-900 border-b border-slate-100 pb-1">
-                #{post.id} — {post.title}
+            <div className="text-base font-bold border-b border-slate-100 pb-1">
+                {post.id} — {post.title}
             </div>
 
             <div className="space-y-0.5 pl-4 border-l-2 border-slate-100 text-sm">
                 <div className="flex gap-2">
-                    <span className="text-slate-400 font-medium">userId:</span>
-                    <span className="text-slate-800">{post.userId}</span>
+                    <span className="font-medium">userId:</span>
+                    <span>{post.userId}</span>
                 </div>
 
                 <div className="flex gap-2">
-                    <span className="text-slate-400 font-medium">body:</span>
-                    <span className="text-slate-800 break-all">{post.body}</span>
+                    <span className=" font-medium">body:</span>
+                    <span>{post.body}</span>
                 </div>
 
                 {isDummyPost(post) && (
                     <>
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">tags:</span>
-                            <span className="text-slate-800">{post.tags.join(", ")}</span>
+                            <span className="font-medium">tags:</span>
+                            <span>{post.tags.join(", ")}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">views:</span>
-                            <span className="text-slate-800">{post.views}</span>
+                            <span className="font-medium">views:</span>
+                            <span>{post.views}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">likes:</span>
-                            <span className="text-slate-800">{post.reactions.likes}</span>
+                            <span className="font-medium">likes:</span>
+                            <span>{post.reactions.likes}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">dislikes:</span>
-                            <span className="text-slate-800">{post.reactions.dislikes}</span>
+                            <span className="font-medium">dislikes:</span>
+                            <span>{post.reactions.dislikes}</span>
                         </div>
                     </>
                 )}

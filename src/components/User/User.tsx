@@ -12,41 +12,41 @@ const isPlaceholderUser = (user: AnyUser): user is IPlaceholderUser => "name" in
 export const User = ({ user }: UserItemProps) => {
     return (
         <div className="space-y-2">
-            <div className="text-base font-bold text-slate-900 border-b border-slate-100 pb-1">
-                #{user.id} — {isPlaceholderUser(user) ? user.name : `${user.firstName} ${user.lastName}`}
+            <div className="text-base font-bold border-b border-slate-100 pb-1">
+                {user.id} — {isPlaceholderUser(user) ? user.name : `${user.firstName} ${user.lastName}`}
             </div>
 
             <div className="space-y-0.5 pl-4 border-l-2 border-slate-100 text-sm">
                 <div className="flex gap-2">
-                    <span className="text-slate-400 font-medium">email:</span>
-                    <span className="text-slate-800">{user.email}</span>
+                    <span className="font-medium">email:</span>
+                    <span>{user.email}</span>
                 </div>
 
                 <div className="flex gap-2">
-                    <span className="text-slate-400 font-medium">phone:</span>
-                    <span className="text-slate-800">{user.phone}</span>
+                    <span className="font-medium">phone:</span>
+                    <span>{user.phone}</span>
                 </div>
 
                 <div className="flex gap-2">
-                    <span className="text-slate-400 font-medium">username:</span>
-                    <span className="text-slate-800">{user.username}</span>
+                    <span className="font-medium">username:</span>
+                    <span>{user.username}</span>
                 </div>
 
                 {isPlaceholderUser(user) ? (
                     <>
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">website:</span>
-                            <span className="text-slate-800">{user.website}</span>
+                            <span className="font-medium">website:</span>
+                            <span>{user.website}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">company:</span>
-                            <span className="text-slate-800">{user.company.name}</span>
+                            <span className="font-medium">company:</span>
+                            <span>{user.company.name}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">address:</span>
-                            <span className="text-slate-800">
+                            <span className="font-medium">address:</span>
+                            <span>
                                 {user.address.street}, {user.address.city}, {user.address.zipcode}
                             </span>
                         </div>
@@ -54,25 +54,25 @@ export const User = ({ user }: UserItemProps) => {
                 ) : (
                     <>
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">age:</span>
-                            <span className="text-slate-800">{user.age}</span>
+                            <span className="font-medium">age:</span>
+                            <span>{user.age}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">company:</span>
-                            <span className="text-slate-800">{user.company.name}</span>
+                            <span className="font-medium">company:</span>
+                            <span>{user.company.name}</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">address:</span>
-                            <span className="text-slate-800">
+                            <span className="font-medium">address:</span>
+                            <span>
                                 {user.address.address}, {user.address.city}, {user.address.country}
                             </span>
                         </div>
 
                         <div className="flex gap-2">
-                            <span className="text-slate-400 font-medium">university:</span>
-                            <span className="text-slate-800">{user.university}</span>
+                            <span className="font-medium">university:</span>
+                            <span>{user.university}</span>
                         </div>
                     </>
                 )}

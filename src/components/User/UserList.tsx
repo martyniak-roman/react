@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getUsersPlaceholder, getUsersDummy } from "../../api/api.service.ts";
+import { getUsersPlaceholder, getUsersDummy } from "../../services/api.service.ts";
 import type { IUser as IPlaceholderUser } from "../../models/JsonPlaceholder/IUser.ts";
 import type { User as IDummyUser } from "../../models/DummyJson/IUser.ts";
 import {User} from "./User.tsx";

@@ -1,4 +1,4 @@
-export interface IUser {
+export interface IDummyUser {
     users: User[]
 }
 

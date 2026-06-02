@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCommentsPlaceholder, getCommentsDummy } from "../../api/api.service.ts";
+import { getCommentsPlaceholder, getCommentsDummy } from "../../services/api.service.ts";
 import type { IComments as IPlaceholderComment } from "../../models/JsonPlaceholder/IComments.ts";
 import type { Comment as IDummyComment } from "../../models/DummyJson/IComment.ts";
 import {Comment} from "./Comment.tsx"

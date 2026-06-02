@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getPostsPlaceholder, getPostsDummy } from "../../api/api.service.ts";
+import { getPostsPlaceholder, getPostsDummy } from "../../services/api.service.ts";
 import type { IPost as IPlaceholderPost } from "../../models/JsonPlaceholder/IPost.ts";
 import type { Post as IDummyPost } from "../../models/DummyJson/IPost.ts";
 import {Post} from "./Post.tsx";
