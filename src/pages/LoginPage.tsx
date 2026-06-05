@@ -1,11 +1,21 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { login } from "../services/api.service"
+import Form from "../components/Form/Form"
 
 const LoginPage = () => {
-    
-    useEffect(() => {}, [])
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    // useEffect(() => {
+    //   login({
+    //     username: username,
+    //     password: password,
+    //     expiresInMins: 1
+    //   })
+    // }, [])
 
   return (
-    <div>LoginPage</div>
+    <Form username={username} password={password} />
   )
 }
 
