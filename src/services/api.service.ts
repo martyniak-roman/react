@@ -13,7 +13,7 @@ export type LoginData = {
 
 // Створює екземпляр Axios з налаштуваннями:
 const axiosInstance = axios.create({
- // Адреса сервера. Вона береться зі змінного оточення за допомогою Vite
+ // Адреса сервера. Вона береться зі змінного оточення (.env)
   baseURL: String(import.meta.env.VITE_API_BASE_URL),
   // Вказує серверу, що всі дані, які ми відправляємо, будуть у форматі JSON.
   headers: {
