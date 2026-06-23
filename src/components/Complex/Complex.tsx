@@ -5,7 +5,9 @@ import { userActions } from "../../redux/slices/UserSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 
 const Complex = () => {
+
 const dispatch = useAppDispatch();
+
     const {commentStoreSlice: {comments}, userStoreSlice: {users}, postStoreSlice: {posts}} = useAppSelector(state => state);
 
     useEffect(() => {
@@ -29,7 +31,7 @@ const dispatch = useAppDispatch();
                 const userPosts = posts.filter(post => post.userId === user.id);
 
                 return (
-                    <div key={user.id} style={{ border: "1px solid gray", padding: "15px", marginBottom: "20px" }}>
+                    <div key={user.id} >
                         <h2>User: {user.name} ({user.email})</h2>
                         
                         <div>
